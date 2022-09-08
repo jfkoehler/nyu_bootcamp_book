@@ -1,0 +1,10 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro.ipynb
+- file: foundations.ipynb
+  sections:
+    - file: fundamentals_I.ipynb
+    - file: fundamentals_II.ipynb
+    - file: fundamentals_III.ipynb
+    - file: fundamentals_IV.ipynb
