@@ -4,13 +4,13 @@
 # # Python Fundamentals 1 
 # 
 #   
-# ####  Outline
+# ##  Outline
 # 
 # Time to start programming! We work our way through some of the essentials of Python's core language. We will do this within a Jupyter Notebook and along the way, become familiar Markdown as well as other properties of the notebook environment. 
 # 
 # [This notebook largely follows the discussion in the Book.](https://nyudatabootcamp.gitbook.io/thebook/py-fun1)
 # 
-# #### Python
+# ### Python
 # 
 # We will learn elementary syntax, calculations, assignments, and as well as python data types, e.g., floats, strings, lists, dictionaries, and built-in functions. We'll also discover some typical bugs and ways to identify, and fix.
 # 
@@ -189,7 +189,7 @@ print(test)
 # 
 # ---
 # 
-# ### Time to practice
+# #### Time to practice
 # 
 # We will do this alot. Here is the deal: Below are a set of excercises, take a couple of minutes and (i) create a code cell below each one and (ii) try and answer them as best as possible. If we don't cover them all inclass, try and attempt them later as you review.
 

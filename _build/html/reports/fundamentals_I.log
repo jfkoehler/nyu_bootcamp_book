@@ -22,8 +22,8 @@ test = log(3) # what do you think will happen here...log is not defined
 print(test)
 ------------------
 
-[0;31m------------------------------------------------[0m
-[0;31mNameError[0m      Traceback (most recent call last)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
 [0;32m<ipython-input-7-17ac4993b34d>[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mtest[0m [0;34m=[0m [0mlog[0m[0;34m([0m[0;36m3[0m[0;34m)[0m [0;31m# what do you think will happen here...log is not defined[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m               [0;31m# log is not a built-in function who will have a different color in notebook[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
