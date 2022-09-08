@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Fundamentals 1 &#8212; Data Bootcamp with Python</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Fundamentals I (Part II)" href="fundamentals_II.html" />
+    <link rel="prev" title="Foundational Topics in Python" href="foundations.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Bootcamp with Python</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   NYU Stern Data Bootcamp
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="foundations.html">
+   Foundational Topics in Python
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Python Fundamentals 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html">
+     Python Fundamentals I (Part II)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#printing-and-help">
+     Printing (and help)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#strings">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#quotation-marks">
+     Quotation Marks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#lists">
+     Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#tuples">
+     Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#dictionaries">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#built-in-functions">
+     Built in Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#changing-types">
+     Changing types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#programming-errors">
+     Programming Errors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fundamentals_II.html#summary">
+     Summary
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/fundamentals_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffundamentals_I.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/fundamentals_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outline">
+   Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-notebook-markdown-warmup">
+   Jupyter Notebook &amp; Markdown Warmup
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jupyter-notebook-essentials">
+     Jupyter Notebook Essentials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-essentials">
+     Markdown Essentials
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simple-calculations-and-assignment">
+   Simple Calculations and Assignment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-to-practice">
+     Time to practice
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="python-fundamentals-1">
+<h1>Python Fundamentals 1<a class="headerlink" href="#python-fundamentals-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<p>Time to start programming! We work our way through some of the essentials of Python’s core language. We will do this within a Jupyter Notebook and along the way, become familiar Markdown as well as other properties of the notebook environment.</p>
+<p><a class="reference external" href="https://nyudatabootcamp.gitbook.io/thebook/py-fun1">This notebook largely follows the discussion in the Book.</a></p>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>We will learn elementary syntax, calculations, assignments, and as well as python data types, e.g., floats, strings, lists, dictionaries, and built-in functions. We’ll also discover some typical bugs and ways to identify, and fix.</p>
+<p><strong>Buzzwords.</strong> Isn’t that enough?</p>
+<p><strong>Trigger warning.</strong> Technical content, cannot be mastered without effort.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="jupyter-notebook-markdown-warmup">
+<h2>Jupyter Notebook &amp; Markdown Warmup<a class="headerlink" href="#jupyter-notebook-markdown-warmup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jupyter-notebook-essentials">
+<h3>Jupyter Notebook Essentials<a class="headerlink" href="#jupyter-notebook-essentials" title="Permalink to this headline">¶</a></h3>
+<p><strong>Opening Jupyter</strong></p>
+<p>If you are reading this, you’ve done it already. But just a reminder…</p>
+<ul class="simple">
+<li><p>Open your terminal (command prompt on Windows)</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and press enter.  This will open a tab in your browser with the word Jupyter at the top and your computer’s directory structure below it.</p></li>
+<li><p>In the browser tab, navigate to your <code class="docutils literal notranslate"><span class="pre">Data_Bootcamp</span></code> directory/folder.</p></li>
+<li><p>Click on the New button in the upper right and choose <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> (it may also refer to this as <code class="docutils literal notranslate"><span class="pre">Python[Root]</span></code>.</p></li>
+</ul>
+<p>In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a <strong>menubar</strong> with the words File, Edit, View, Cell, Kernel, and Help.</p>
+<p><strong>Downloading a Jupyter Notebook from Github</strong></p>
+<ul class="simple">
+<li><p>First go to the notebook github page and then click on <em>Raw</em>.</p></li>
+<li><p>Then, Right click or press command+s (ctrl+s if you are using windows) to save it as .ipynb.</p></li>
+<li><p>Go to location where you saved .ipynb file.</p></li>
+<li><p>Open file, you will see the code.</p></li>
+</ul>
+<p><strong>Playing with Jupyter</strong></p>
+<ul class="simple">
+<li><p>Change the notebook name.  Click on the name (<code class="docutils literal notranslate"><span class="pre">Untitled</span></code> if we just created a new notebook) to the right of the word Jupyter at the top. A textbox should open up.  Use it to change the name to <code class="docutils literal notranslate"><span class="pre">bootcamp_sandbox</span></code>.</p></li>
+<li><p>Toolbar buttons.  Let your mouse hover over one of them to see what it does.</p></li>
+<li><p>Add a cell.  Click on the <code class="docutils literal notranslate"><span class="pre">+</span></code> in the toolbar to create a new cell.</p></li>
+<li><p>Keyboard shortcuts.</p></li>
+</ul>
+</div>
+<div class="section" id="markdown-essentials">
+<h3>Markdown Essentials<a class="headerlink" href="#markdown-essentials" title="Permalink to this headline">¶</a></h3>
+<p>Markdown is a simplified version of html (“hypertext markup language”), the language used to construct basic websites. It has a zen-like simplicity and beauty.</p>
+<ul>
+<li><p><strong>Headings</strong>.  Large bold headings are marked by hashes (<code class="docutils literal notranslate"><span class="pre">#</span></code>).  One hash for first level (very large), two for second level (a little smaller), three for third level (smaller still), four for fourth (the smallest).  Try these in a Markdown cell to see how they look:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Bootcamp sandbox</span>
+<span class="c1">## Data Bootcamp sandbox</span>
+<span class="c1">### Data Bootcamp sandbox</span>
+</pre></div>
+</div>
+<p>Be sure to run the cell when you’re done (<code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">enter</span></code>).</p>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Bold and italics</strong>.  If we put a word or phrase between double asterisks, it’s displayed in bold.  Thus <code class="docutils literal notranslate"><span class="pre">**bold**</span></code> displays as <strong>bold</strong>.  If we use single asterisks, we get italics:  <code class="docutils literal notranslate"><span class="pre">*italics*</span></code> displays as <em>italics</em>.</p></li>
+</ul>
+<ul>
+<li><p><strong>Bullet lists</strong>.  If we want a list of items marked by bullets, we start with a blank line and mark each item with an asterisk on a new line:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>* something
+* something else
+</pre></div>
+</div>
+</li>
+</ul>
+<ul>
+<li><p><strong>Links</strong>.   We construct a link with the text in square brackets and the url in parentheses immediately afterwards.  Try this one:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Data</span> <span class="n">Bootcamp</span> <span class="n">course</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">nyu</span><span class="o">.</span><span class="n">data</span><span class="o">-</span><span class="n">bootcamp</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>We can find more information about Markdown under Help.  Or use your <a class="reference external" href="https://www.urbandictionary.com/define.php?term=google-fu">Google fu</a>.</p>
+<p><strong>Exercise.</strong> Ask questions if you find any of these steps mysterious:</p>
+<ul class="simple">
+<li><p>Close Jupyter.</p></li>
+<li><p>Start Jupyter.</p></li>
+<li><p>In Jupyter, open an new Ipython notebook within your Data_Bootcamp directory/folder, point to the code cell, the name of the notebook, and the help button.</p></li>
+<li><p>Save the file bootcamp_class_pyfun1 in your This file will serve as your notes for this class.</p></li>
+<li><p>Create a description cell in Markdown at the top of your notebook. It should include your name and a description of what you’re doing in the notebook. For example: “Mike Waugh’s first notebook for Python fundamentals 1” and a date.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="simple-calculations-and-assignment">
+<h2>Simple Calculations and Assignment<a class="headerlink" href="#simple-calculations-and-assignment" title="Permalink to this headline">¶</a></h2>
+<p>Literally the “bread and butter” of scientific computation…let’s get started:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="c1"># simple multiplication</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add some white space, nice feature of python is that it is not sensitve to this..</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add some more...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># What about division...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># What about module...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Side note</strong> Note how in the cell I have comments that are not interperted by python. To create comments simply type <code class="docutils literal notranslate"><span class="pre">#</span></code> and then what ever comment you want to make. Comments are <strong>important</strong> because they help make your code readable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### exponents</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># what do you think will happen here...log is not defined</span>
+              <span class="c1"># log is not a built-in function who will have a different color in notebook</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">      </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">17</span><span class="n">ac4993b34d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">test</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># what do you think will happen here...log is not defined</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>               <span class="c1"># log is not a built-in function who will have a different color in notebook</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;log&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note how the compute just stopped. It did not compute. Remember, python and the computer are DUMB! You gave it an instruction that it did not know what to do, so it stopped, and did not proceed. A couple of points about this:</p>
+<ul class="simple">
+<li><p>The top to bottom (within a code cell), simply following instructions/commands nature of a program.</p></li>
+<li><p>When you run this, note how (after some stuff) tells you where the problem is: Line 1, then this name log is not defined.</p></li>
+</ul>
+<p><strong>Assignment</strong> Above I’ve been assigning variables… but let’s look at this more closely…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># x = 2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nice so the thing on the left is the “variable” named “x”, then the thing on the right is the value that this variable is assigned… then the = sign is the operator that assighns that value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print x</span>
+
+<span class="c1">#define y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we are getting somewhere, we take these variables and perform an operation. Notice that (like excel) the value assigned to z will change as we change the values assigned to x or y. But there is a difference with excel…what is it?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># variable z is quotient</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is a place where you might want to figure out what variables there are within the enviornment. For example, what is <code class="docutils literal notranslate"><span class="pre">x</span></code>  (the type and size ignore for now) and then the value…how do you do this, with the <code class="docutils literal notranslate"><span class="pre">whos</span></code> command, which will provide this information.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#whos</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a nice feature in that it is a way for you to always understand what variables are in your environment at any point in time, their type, etc.</p>
+<hr class="docutils" />
+<div class="section" id="time-to-practice">
+<h3>Time to practice<a class="headerlink" href="#time-to-practice" title="Permalink to this headline">¶</a></h3>
+<p>We will do this alot. Here is the deal: Below are a set of excercises, take a couple of minutes and (i) create a code cell below each one and (ii) try and answer them as best as possible. If we don’t cover them all inclass, try and attempt them later as you review.</p>
+<p><strong>Exercise.</strong> Type <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">7</span></code> in a cell.  In the same cell, next line below, type <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">w</span> <span class="pre">+</span> <span class="pre">2</span></code>. In the next line below type <code class="docutils literal notranslate"><span class="pre">w</span></code> (so we can see the output). What does this code do?  Why is this not a violation of basic mathematics?</p>
+<p><strong>Exercise.</strong> In another code cell type <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">w</span> <span class="pre">+</span> <span class="pre">2</span></code> and then <code class="docutils literal notranslate"><span class="pre">w</span></code> below it (again so we can see the output). Evaluate this cell once. Do it again. Do it again. What is going on here?</p>
+<p><strong>Exercise.</strong>  Suppose we borrow 200 for one year at an interest rate of 5 percent.  If we pay interest plus principal at the end of the year, what is our total payment?  Compute this using the variables <code class="docutils literal notranslate"><span class="pre">principal</span> <span class="pre">=</span> <span class="pre">200</span></code> and <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">0.05</span></code>.</p>
+<p><strong>Exercise.</strong> Real GDP in the US (the total value of things produced) was 15.58 trillion in 2013 and 15.96 trillion in 2014.  What was the growth rate?  Express it as an annual percentage.</p>
+<p><strong>Exercise (challenging).</strong>  Suppose we have two variables, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.  How would you switch their values, so that <code class="docutils literal notranslate"><span class="pre">x</span></code> takes on <code class="docutils literal notranslate"><span class="pre">y</span></code>’s value and <code class="docutils literal notranslate"><span class="pre">y</span></code> takes on <code class="docutils literal notranslate"><span class="pre">x</span></code>’s?</p>
+<p><strong>Exercise (challenging).</strong>  Type <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">6</span></code> in a cell.  We’ve reassigned <code class="docutils literal notranslate"><span class="pre">x</span></code> so that its value is now 6, not 2. If we type and submit <code class="docutils literal notranslate"><span class="pre">z</span></code>, we see</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">z</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="o">.</span><span class="mi">6666666666</span>
+</pre></div>
+</div>
+<p>But wait, if <code class="docutils literal notranslate"><span class="pre">z</span></code> is supposed to be <code class="docutils literal notranslate"><span class="pre">x/y</span></code>, and <code class="docutils literal notranslate"><span class="pre">x</span></code> now equals 6, then shouldn’t <code class="docutils literal notranslate"><span class="pre">z</span></code> be 2? What do you think is going on?</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="foundations.html" title="previous page">Foundational Topics in Python</a>
+    <a class='right-next' id="next-link" href="fundamentals_II.html" title="next page">Python Fundamentals I (Part II)</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jacob Frias Koehler<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
